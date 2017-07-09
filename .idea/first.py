@@ -1,6 +1,5 @@
 from Tkinter import *
 #creates the GUI
-#creates the GUI
 root = Tk()
 root.resizable(width=False, height=False)
 root.geometry("500x300")
