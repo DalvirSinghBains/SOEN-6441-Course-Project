@@ -1,6 +1,7 @@
-#use the Gregory-Leibniz series for the calculation of Pi
+#The Gregory-Leibniz series is used for the calculation of Pi
 #pi=4(1-1/3+1/5-1/7+1/9-1/11+...........)
-#here the loops are iterated 10^6 times
+#Since the above series consists of infinite terms
+#hence the loops are iterated for 10^6 times
 #to get the value of pi correct to 7 decimal places # pi=3.14159215359
 
 class PiApproximation(object):

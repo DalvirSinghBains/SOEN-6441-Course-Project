@@ -1,9 +1,9 @@
-#L=2R(1-cosA)
-# The input values to this function are
-# Radius input by the user
-# The value of cosA calculated using the Math.sin() function
-# The  output value produced is length by the above formula
-#degrees=radians*(180/pi)
+#L=2R(1-cosx)
+# Radius is input by the user
+# The value of cosx in equation [L=2R(1-cosx)] is calculated using the Math.cos(x) function
+# The  output value is length by using the above formula
+# Two values are length are calculated based on the alpha measurement(radians and degrees)
+
 import math
 import AlphaCalculator
 
