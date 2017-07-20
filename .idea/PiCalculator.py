@@ -1,6 +1,6 @@
 #use the Gregory-Leibniz series for the calculation of Pi
 #pi=4(1-1/3+1/5-1/7+1/9-1/11+...........)
-#
+
 def pi_calculator(terms):
  positive_sum = 0.0
  negative_sum = 0.0
