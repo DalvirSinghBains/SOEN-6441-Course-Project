@@ -12,7 +12,7 @@ class PiApproximation(object):
    terms = 1000000
 
    for n in range(1,terms,1):
-    positiveSum += 1/((4*n)-3.0)
+     positiveSum += 1/((4*n)-3.0)
    for n in range(1,terms,1):
      negativeSum += 1/((4*n)-1.0)
 
