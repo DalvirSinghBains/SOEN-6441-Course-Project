@@ -19,7 +19,7 @@ class LengthCalculator(object):
             print('Enter the value of radius:')
             try:
                 radius=input()
-            except (ValueError, TypeError, NameError):
+            except (ValueError, TypeError, NameError,SyntaxError):
                 print("Oops!  That was no valid number.  Try running the program again with non-character input...")
                 #user_input=1
                 break
@@ -34,9 +34,9 @@ class LengthCalculator(object):
                 length_list.append(length_for_radians)
                 print('')
                 print('Do you want to calculate for another input radius?')
-                print('Enter 1 for Yes')
-                print('Enter 2 for No')
-                print('Enter 3 for viewing XML output')
+                print('<----Enter 1 for Yes---->')
+                print('<----Enter 2 for No----->')
+                print('<----Enter 3 for viewing XML output----->')
                 try:
                     choice = int(input())
                     # break
