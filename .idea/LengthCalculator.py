@@ -81,6 +81,3 @@ class LengthCalculator(object):
 
 lengthObject=LengthCalculator()
 lengthObject.calculateLength()
-
-
-
