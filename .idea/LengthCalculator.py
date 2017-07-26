@@ -9,7 +9,7 @@ from xml.etree.ElementTree import ElementTree,Element, SubElement, Comment, tost
 import lxml.etree as etree
 import xml.etree.cElementTree as ET
 
-class LengthCalculator:
+class LengthCalculator(object):
     def calculateLength(self):
         #The user is prompted to enter the value of radius at runtime
         user_input=1
@@ -42,14 +42,15 @@ class LengthCalculator:
                     # break
                 except (ValueError,TypeError, NameError,SyntaxError,UnboundLocalError):
                     print("Oops! the number must be an integer.It must not be a character/string or special character")
+                    print("Try re-running the program")
                     exit(0)
                 if(choice==1):
                     user_input=1
                 elif(choice==2):
                     user_input=0
                 elif (choice == 3):
-                    print('Radius values:'+str(radius_list))
-                    print('Length values:'+str(length_list))
+                    #print('Radius values:'+str(radius_list))
+                    #print('Length values:'+str(length_list))
                     radius_list_values=radius_list
                     length_list_values = length_list
                     cheers = ET.Element("cheers")
@@ -62,8 +63,8 @@ class LengthCalculator:
                                 length = ET.SubElement(output, "length")
                                 length.text = str(length_list_values[a])
                     tree = ET.ElementTree(cheers)
-                    tree.write(open(r'C:\Users\DALVIR SINGH BAINS\PycharmProjects\SOEN-6441-Course-Project\.idea\cheersFinal.xml', 'w'))
-                    x = etree.parse("cheersFinal.xml")
+                    tree.write(open(r'C:\Users\DALVIR SINGH BAINS\PycharmProjects\SOEN-6441-Course-Project\.idea\cheers.xml', 'w'))
+                    x = etree.parse("cheers.xml")
                     print etree.tostring(x, pretty_print=True)
                     user_input=0
                 else:
@@ -71,7 +72,6 @@ class LengthCalculator:
                     print('Try re-running the program...')
                     #flag=1
                     user_input = 0
-                    #exit(0)
             else:
                 print('Please enter an interger between 1 to 30')
                 print('and re-run the program')

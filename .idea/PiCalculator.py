@@ -8,7 +8,7 @@ class PiApproximator(object):
   def piCalculator(self):
     positiveSum = 0.0
     negativeSum = 0.0
-    terms = 100000
+    terms = 1000000
 
     for n in range(1,terms,1):
       positiveSum += 1/((4*n)-3.0)
