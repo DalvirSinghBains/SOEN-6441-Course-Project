@@ -2,14 +2,14 @@ from scipy.optimize import newton
 import math
 import PiCalculator
 
-piObject = PiCalculator.PiApproximation()
+piObject = PiCalculator.PiApproximator()
 piEstimate=piObject.piCalculator()
 
 #math module of Python is used to calculate the values of sin(x) and cos(x) functions
 def f(x):
- return (x - math.sin(x) - (piEstimate/ 2))
+    return (x - math.sin(x) - (piEstimate/ 2))
 def df(x):
-  return (1 - math.cos(x))
+    return (1 - math.cos(x))
 
 # newton's method from the SciPy package is used to calculate the value of alpha iteratively
 # the initial guess for the alpha is taken as 2

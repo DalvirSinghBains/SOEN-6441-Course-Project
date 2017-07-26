@@ -4,21 +4,19 @@
 #hence the loops are iterated for 10^6 times
 #to get the value of pi correct to 7 decimal places # pi=3.14159215359
 
-class PiApproximation(object):
+class PiApproximator(object):
+  def piCalculator(self):
+    positiveSum = 0.0
+    negativeSum = 0.0
+    terms = 100000
 
- def piCalculator(self):
-   positiveSum = 0.0
-   negativeSum = 0.0
-   terms = 1000000
+    for n in range(1,terms,1):
+      positiveSum += 1/((4*n)-3.0)
+    for n in range(1,terms,1):
+      negativeSum += 1/((4*n)-1.0)
 
-   for n in range(1,terms,1):
-     positiveSum += 1/((4*n)-3.0)
-   for n in range(1,terms,1):
-     negativeSum += 1/((4*n)-1.0)
-
-   piEstimate=4*(positiveSum-negativeSum)
-   return piEstimate
-
+    piEstimate=4*(positiveSum-negativeSum)
+    return piEstimate
 
 
 
