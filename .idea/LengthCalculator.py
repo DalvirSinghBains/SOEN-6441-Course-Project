@@ -62,10 +62,14 @@ class LengthCalculator(object):
                                 radius.text = str(radius_list_values[s])
                                 length = ET.SubElement(output, "length")
                                 length.text = str(length_list_values[a])
-                    tree = ET.ElementTree(cheers)
-                    tree.write(open(r'C:\Users\DALVIR SINGH BAINS\PycharmProjects\SOEN-6441-Course-Project\.idea\cheers.xml', 'w'))
+                    with open(r'C:\Users\DALVIR SINGH BAINS\PycharmProjects\SOEN-6441-Course-Project\.idea\cheers.xml', 'w') as f:
+                        f.write('<?xml version="1.0" encoding="UTF-8" ?><!DOCTYPE cheers [<!ELEMENT cheers (output+)>'
+                                '<!ELEMENT output (radius,length)>'
+                                '<!ELEMENT radius (#PCDATA)>'
+                                '<!ELEMENT length (#PCDATA)>]>')
+                        ET.ElementTree(cheers).write(f, 'utf-8')
                     x = etree.parse("cheers.xml")
-                    print etree.tostring(x, pretty_print=True)
+                    print etree.tostring(x, pretty_print=True,xml_declaration=True,standalone=True)
                     user_input=0
                 else:
                     print("Oops! the choice must be either 1 or 2 or 3")
